@@ -1,42 +1,167 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.header{
+  margin: 0;
+  padding: 0;
+  min-height: 100px;
+  line-height: 2;
+  height: 10vh;
+  width: 100vw;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.intro{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.introText{
+  width: 900px;
+}
+
+.galleryContainer{
+  width: 100vw;
+  height: fit-content;
+  display: grid;
+  place-items: center;
+  padding: 30px 0;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  width: 80%;
+  height: fit-content;
+  gap: 30px;  
+}
+
+.event{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  gap: 5px;
+  border: 1.5px solid #242424;
+  font-weight: 600;
+  font-size: 2rem;
+  background-color: #FFF8F0;
+}
+
+.event img{
+  /* width: 100%; */
+  object-fit: contain;
+  max-width: 90%;
+  height: 50%;
+  border-radius: 8px;
+}
+
+.imageContainer img{
+    width: fit-content;
+    height: fit-content;
+  
+}
+
+.eventInfo{
+  font-size: 16px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.eventLink{
+  border-radius: 4px;
+  border: none;
+  width: fit-content;
+  padding: 10px;
+  background-color: #FFF8F0;
+  border: 1px solid #242424;
+  cursor: pointer;
+  font-family: 'Martian Mono', monospace;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+
+
+
+
+
+
+
+/* If the screen is less than 1024px wide */
+@media only screen and (max-width: 1024px){
+  .gallery{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.card {
-  padding: 2em;
+
+
+
+
+
+
+
+
+
+/* If the screen is less than 600px wide */
+@media only screen and (max-width: 600px){
+  .header{
+    font-size: 2rem;
+    height: fit-content;
+    line-height: 1.2;
+  }
+
+
+  .introText{
+    text-align: left;
+    padding: 0 40px 0 40px;
+  }
+
+
+  .galleryContainer{
+    padding: 20px 0;
+  }
+
+
+  .gallery{
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .event{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
+
+
+
+
+
+/* If the user prefers dark theme */
+@media (prefers-color-scheme: dark) {
+  
+.event{
+  height: 300px;
+  width: 300px;
+  border-radius: 6px;
+  border: 2px solid #FFF8F0;
+  background-color: #242424;
 }
 
-.read-the-docs {
-  color: #888;
+
+.eventLink{
+  background-color: #242424;
+  border: 2px solid #FFF8F0;
+}
 }

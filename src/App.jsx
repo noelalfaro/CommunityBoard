@@ -1,12 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Header from './components/Header'
+import Intro from './components/Intro'
+import Gallery from './components/Gallery'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <h1>First commit for the project</h1>
+    <>
+    <Header/>
+    <Intro/>
+    <Gallery/>
+    </>
   )
 }
 
